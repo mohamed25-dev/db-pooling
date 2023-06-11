@@ -1,0 +1,19 @@
+services:
+  app:
+    build: .
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    env_file:
+      - .env
+  db:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: ${DB_NAME:-users_db}
+      POSTGRES_USER: ${DB_USER:-admin}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-admin}
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
