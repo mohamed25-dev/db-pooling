@@ -3,8 +3,11 @@ This is a simple NodeJS application created to demonstrate the performance diffe
 It aims to showcase the benefits of utilizing a connection pool for handling database connections.
 
 ## How to Run
-To run the application, make sure you have Docker installed on your system, add .env file (you can copy .env-example). Then, execute the following command:
+To run the application, make sure you have Docker installed on your system,
 
+Add ``` .env ``` file (you can copy ``` .env-example ```). 
+
+Then, execute the following command:
 ```
 docker-compose up
 ```
